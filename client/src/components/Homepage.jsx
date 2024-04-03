@@ -67,7 +67,9 @@ export default function Homepage() {
       // setPage(1);
       const fetchData = async () => {
         try {
-          const { data } = await axios.get(`/api/users?q=${searchTerm}`);
+          const { data } = await axios.get(
+            `/api/users?q=${searchTerm}&gender=${gender}&domain=${domain}&available=${available}`
+          );
 
           setUsers(data.data);
         } catch (error) {

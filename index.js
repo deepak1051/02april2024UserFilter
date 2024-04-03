@@ -1,6 +1,7 @@
 import 'dotenv/config.js';
 import express from 'express';
 import userRoutes from './routes/userRoutes.js';
+import teamRoutes from './routes/teamRoutes.js';
 
 import mongoose from 'mongoose';
 
@@ -16,6 +17,7 @@ const app = express();
 app.use(express.json());
 
 app.use('/api/users', userRoutes);
+app.use('/api/team', teamRoutes);
 
 if (process.env.NODE_ENV === 'production') {
   const __dirname = path.resolve();
