@@ -69,7 +69,7 @@ export default function CreateTeam() {
         members: teamUsers,
       });
 
-      navigate('/myteams');
+      navigate('/teams');
     } catch (error) {
       console.log(error);
       setError(error.response.data.message || error.message);
